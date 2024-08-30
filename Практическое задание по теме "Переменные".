@@ -1,0 +1,10 @@
+home_work = 12
+hours = 1.5
+cours = 'Python'
+time_for_cours = str(hours / home_work)
+home_work1 = str(home_work)
+hours1 = str(hours)
+print('Курс '+ cours + ', всего задач: '
++ home_work1 + ', затрачено часов: '
++ hours1 + ', среднее время выполнения '
++ time_for_cours + ' часа.')
