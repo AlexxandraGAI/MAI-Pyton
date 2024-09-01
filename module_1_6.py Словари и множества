@@ -1,0 +1,16 @@
+my_dict = {'Petrov': [5, 4, 5, 3], 'Vasev': [5,5,5,5], 'Pulin': [3,5,2] }
+print(my_dict)
+print(my_dict['Petrov'])
+print(my_dict.get('Popov'))
+my_dict.update({'Ivanov':[3,5,4], 'Stepanov':[3,4,3]})
+key_del = my_dict.pop('Vasev')
+print(key_del)
+print(my_dict)
+
+
+my_set = {9, 9.9, 'Nine', 9, True, 0}
+print(my_set)
+my_set.add(9999)
+my_set.add(9.8)
+my_set.discard(True)
+print(my_set)
