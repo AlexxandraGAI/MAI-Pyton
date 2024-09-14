@@ -1,0 +1,18 @@
+def print_params(a=1, b='строка', c=True):
+    print(a, b, c)
+
+
+print_params()
+print_params(5)
+print_params(2, 'string', False)
+# print_params(5, 'five', True, 1.1) # ошибка использования лишнего аргумента: print_params() takes from 0 to 3 positional arguments but 4 were given
+print_params(b=25)
+print_params(c=[1, 2, 3])
+
+values_list = [5, 'five', True]
+values_dict = {'a':9, 'b':'nine', 'c':False}
+print_params(*values_list)
+print_params(**values_dict)
+
+values_list_2 = [1.5, "'string'"]
+print_params(*values_list_2, 42)
