@@ -1,0 +1,35 @@
+data_structure = [
+    [1, 2, 3],
+    {'a': 4, 'b': 5},
+    (6, {'cube': 7, 'drum': 8}),
+    "Hello",
+    ((), [{(2, 'Urban', ('Urban2', 35))}])
+]
+
+
+def calculate_structure_sum(data_structure):
+    sum_numb = 0
+    sum_str = 0
+
+    def recurs(args):
+        nonlocal sum_numb, sum_str
+        if isinstance(args, list) or isinstance(args, set) or isinstance(args, tuple):
+            for i in args:
+                recurs(i)
+        elif isinstance(args, dict):
+            for key in args.keys():
+                recurs(key)
+            for value in args.values():
+                recurs(value)
+        elif isinstance(args, int) or isinstance(args, str):
+            if isinstance(args, int):
+                sum_numb += args
+            if isinstance(args, str):
+                sum_str += len(args)
+
+    recurs(data_structure)
+    return sum_str + sum_numb
+
+
+result = calculate_structure_sum(data_structure)
+print(result)
